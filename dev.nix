@@ -3,10 +3,10 @@ let
   stdenv = pkgs.stdenv;
   pypkgs = pkgs.pythonPackages;
 in with pkgs; {
-  myProject = pypkgs.buildPythonPackage {
+  logparser = pypkgs.buildPythonPackage {
     pname = "logparser";
     version = "1";
-    src = ./logparser;
+    src = ./.;
 
     buildInputs = with pypkgs; [
       ipython
